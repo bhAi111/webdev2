@@ -88,3 +88,8 @@ content {
 .navbar-inverse{
       margin-bottom: 0px;
 }
+
+
+.access .form-control{
+      border-radius: 0px;
+}

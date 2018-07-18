@@ -1,0 +1,3 @@
+[submodule "EasyDB"]
+	path = EasyDB
+	url = https://github.com/markheramis/EasyDB.git
