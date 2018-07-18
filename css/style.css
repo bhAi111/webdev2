@@ -94,13 +94,15 @@ content {
 .access .form-control{
       border-radius: 0px;
 }
-
+.navbar-brand{
+      padding: 16px 15px;
+}
 .navbar-brand * {
       float:left;
 }
 .navbar-brand img{
       max-height: 40px;
-      margin-top: -7px;
+      margin-top: -10px;
 }
 .navbar-brand span{
       margin-left: 20px;
