@@ -38,6 +38,15 @@
                 
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li>
+                    
+                    <!-- Button trigger modal -->
+                    <a type="button"  data-toggle="modal" data-target="#myModal">
+                        <i class="fa fa-cart-arrow-down"></i>
+                        <span>Cart</span>
+                    </a>
+
+                </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
