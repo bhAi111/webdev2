@@ -2,6 +2,7 @@ body {
       margin: 0;
       padding: 0;
       /*font-family: Quicksand;*/
+      padding-top: 50px;
 }
  
 nav {
@@ -92,4 +93,16 @@ content {
 
 .access .form-control{
       border-radius: 0px;
+}
+
+.navbar-brand * {
+      float:left;
+}
+.navbar-brand img{
+      max-height: 40px;
+      margin-top: -7px;
+}
+.navbar-brand span{
+      margin-left: 20px;
+      font-weight: bolder;
 }
