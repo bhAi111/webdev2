@@ -2,14 +2,22 @@
 <?php include_once('navbar.php'); ?>
 <div class="wrapper">
 
-  <section class="sec1"></section>
-  <section class="content">
-      <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </p>
-      <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </p>
+  <section class="container">
+  <?php for($i = 0; $i < 10; $i++ ) { ?>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="img/product-placeholder.jpg" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p>
+        	<a href="#" class="btn btn-primary" role="button"><i class="fa fa-eye"></i> View Product</a> 
+        	<a href="#" class="btn btn-default" role="button"><i class="fa fa-cart-plus"></i> Add to Cart</a></p>
+      </div>
+    </div>
+  </div>
+<?php } ?>
+  
   </section>
 </div>
 <?php include_once('footer.php'); ?>
