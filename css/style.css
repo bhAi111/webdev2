@@ -112,3 +112,29 @@ content {
 .products .thumbnail{
 padding-top: 10px;
 }
+
+.btn-success {
+      padding: 20px 30px;
+      margin: 0px 5px;
+      font-size: 20px;
+}
+
+.products {      
+      margin-top: 20px;
+}
+
+.products .nav li{
+      padding-left: 10px;
+      padding-right: 10px;
+}
+.products .nav .btn{
+      transition: all 0.5s;
+}
+.products .nav .btn:hover{
+      background-color: black;
+      color: red;
+}
+
+.products .grid{
+      margin-top: 50px;
+}
