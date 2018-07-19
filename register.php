@@ -22,6 +22,8 @@ $message = "";
 if(!empty($_POST)){
 	$new_user = [
 		'tblname' => 'user',
+
+		// kini gi state nako ang mga columns nga butangan
 		'columns' => [
 			'userlevel',
 			'username',
@@ -33,6 +35,7 @@ if(!empty($_POST)){
 			'email',
 			'gender'
 		],
+		// diri gi butang naq ang value with respect to columns, dapat ang data in-according pd sa order sa columns
 		'value' => [
 			1,
 			$_POST['username'],
@@ -46,8 +49,7 @@ if(!empty($_POST)){
 		]
 	];
 	if ($edb->insertData($new_user)) {
-		$alert_class = 'success';
-		$message = "User created successfully";
+		header('location: login.php');
 	}else{
 		$alert_class = 'danger';
 		$message = "Failed to create user";
