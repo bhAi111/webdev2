@@ -2,7 +2,21 @@
 <?php include_once('navbar.php'); ?>
 <div class="wrapper">
 
-  <section class="container">
+
+
+  	<section class="container Product">
+
+<button type="button" class="btn btn-Motherboard">Motherboard</button>
+<button type="button" class="btn btn-GPU">GPU's</button>
+<button type="button" class="btn btn-Monitor">Monitor</button>
+<button type="button" class="btn btn-Keyboard">Keyboards</button>
+<button type="button" class="btn btn-Mice">Mice</button>
+<button type="button" class="btn btn-Headset">Headset</button>
+
+</section>
+ 
+ 	<section class="container Product">
+
   <?php for($i = 0; $i < 10; $i++ ) { ?>
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
