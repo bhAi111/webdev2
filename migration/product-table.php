@@ -11,14 +11,14 @@ $product_table = array(
 			'notnull'=>true
 		),
 		array(
-			'name'=>'productname',
+			'name'=>'product_name',
 			'type'=>'varchar',
 			'length'=>255,
 			'unique'=>true,
 			'notnull'=>true,
 		),
 		array(
-			'name'=>'productdescription',
+			'name'=>'product_description',
 			'type'=>'text'
 		),
 		array(
@@ -30,9 +30,6 @@ $product_table = array(
 			'name'=>'quantity',
 			'type'=>'int',
 			'notnull'=>true,
-
 		),
-
-
 	)
 );

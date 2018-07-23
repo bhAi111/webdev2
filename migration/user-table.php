@@ -57,6 +57,11 @@ $user_table = array(
             'name'=>'gender',
             'type'=>'varchar',
             'length'=>6
+        ),
+        array(
+            'name' => 'user_type',
+            'type' => 'int',
+            'length' => 1
         )
     )
 );
