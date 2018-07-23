@@ -1,6 +1,6 @@
 <?php
 
-include_once('EasyDB/class-EasyDB.php');
+include_once(ROOT_PATH.'EasyDB/class-EasyDB.php');
 define('dbhost','localhost');
 define('dbuser','root');
 define('dbpass','');
