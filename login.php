@@ -7,7 +7,7 @@ if(empty($_SESSION['user_id'])){
 	// wala na, finish na
 }else{
 	// if naa
-	header('Location: admin.php');
+	header('Location: admin/index.php');
 }
 ?>
 
@@ -34,7 +34,7 @@ if(!empty($_POST)){
 		$user = $edb->getNext();
 		if(!empty($user)){
 			$_SESSION['user_id'] = $user->id;
-			header('Location: admin.php');
+			header('Location: admin/index.php');
 		}else{
 			$error = true;
 		}

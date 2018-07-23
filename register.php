@@ -6,7 +6,7 @@
 if(!empty($_SESSION['user_id'])){
 	// if naay session
 	// redirect sa admin
-	header('Location: admin.php');
+	header('Location: admin/index.php');
 
 }else{
 	// if walay session
@@ -33,7 +33,8 @@ if(!empty($_POST)){
 			'lastname',
 			'age',
 			'email',
-			'gender'
+			'gender',
+            'user_type'
 		],
 		// diri gi butang naq ang value with respect to columns, dapat ang data in-according pd sa order sa columns
 		'value' => [
@@ -46,6 +47,7 @@ if(!empty($_POST)){
 			$_POST['age'],
 			$_POST['email'],
 			$_POST['gender'],
+            2
 		]
 	];
 	if ($edb->insertData($new_user)) {

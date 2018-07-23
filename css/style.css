@@ -3,6 +3,7 @@ body {
       padding: 0;
       /*font-family: Quicksand;*/
       padding-bottom: 50px;
+      padding-top: 50px;
 }
  
 nav {
@@ -137,4 +138,76 @@ padding-top: 10px;
 
 .products .grid{
       margin-top: 50px;
+}
+
+.footer {
+    background: #000;
+    padding: 5% 0;
+}
+
+.footer ul.footer_box {
+    list-style: none;
+    padding: 0;
+}
+.footer ul.footer_box h4 {
+    color: #fff;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 8%;
+}
+
+.footer ul.footer_box li a {
+    color: #B8B6B6;
+    font-size: 0.8125em;
+    text-decoration: none;
+    line-height: 2em;
+}
+
+.footer .footer_search input[type="text"] {
+    outline: none;
+    padding: 12px 15px;
+    outline: none;
+    color: #202020;
+    background: #FFF;
+    border: none;
+    width: 74%;
+    line-height: 1.5em;
+    font-size: 0.8125em;
+}
+
+.footer .footer_search input[type="submit"] {
+    background: #C7C7C7;
+    padding: 9px 19px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    line-height: 1.6em;
+    font-size: 1em;
+    color: #000;
+    font-weight: 800;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.footer ul.social {
+    list-style: none;
+    padding: 0;
+    margin-top: 17%;
+}
+
+.footer ul.social li:first-child, ol li:first-child {
+    margin-top: 0px;
+    margin-left: 0;
+}
+
+.footer ul.social li {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.footer ul.social a i{
+      font-size: 20px;
 }
