@@ -81,7 +81,7 @@ include_once('_template/navbar.php');
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Sign in</button>
+      <button type="submit" class="btn btn-default">Submit</button>
     </div>
   </div>
 

@@ -13,6 +13,12 @@ $products = $edb->select(array(
 ?>
 
 <div class="container">
+
+	<?php if(!empty($_GET['notif_type']) && !empty($_GET['notif_message'])){ ?>
+		<div class="alert alert-<?php echo $_GET['notif_type']; ?>" role="alert">
+	        <?php echo $_GET['notif_message'] ?>
+	    </div>
+	<?php } ?>
 	<table class="table">
 		<thead>
 			<tr>

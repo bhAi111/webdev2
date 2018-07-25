@@ -8,12 +8,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">
+            <a class="navbar-brand" href="<?php echo ROOT_URL; ?>index.php">
                   <img src="<?php echo ROOT_URL; ?>img/logo.png">
                   <span>GG SHOP</span>
             </a>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -29,8 +28,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         Customer <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">List</a></li>
-                        <li><a href="#">Add</a></li>
+                        <li><a href="customer-list.php">List</a></li>
                     </ul>
                 </li>
                 
@@ -51,6 +49,7 @@
                             <li><a href="<?php echo ROOT_URL; ?>register.php">Register</a></li>
 
                         <?php } else { ?>
+                            <li><a href="<?php echo ROOT_URL; ?>admin/index.php">Admin Panel</a></li>
                             <li><a href="<?php echo ROOT_URL; ?>logout.php">Lougout</a></li>
                         <?php } ?>
                     </ul>

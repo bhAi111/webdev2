@@ -55,7 +55,8 @@
                             <li><a href="register.php">Register</a></li>
 
                         <?php } else { ?>
-                            <li><a href="logout.php">Lougout</a></li>
+                            <li><a href="<?php echo ROOT_URL; ?>admin/index.php">Admin Panel</a></li>
+                            <li><a href="<?php echo ROOT_URL; ?>logout.php">Lougout</a></li>
                         <?php } ?>
                     </ul>
                 </li>
