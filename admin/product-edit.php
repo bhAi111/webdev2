@@ -58,8 +58,8 @@ if(!empty($_GET)){
 	]);
 	$product = $edb->getNext();
 }
-include_once('_template/header.php');
-include_once('_template/navbar.php');
+include_once(ROOT_PATH.'header.php');
+include_once(ROOT_PATH.'navbar.php');
 ?>
 <div class="container">
 	<br/>
@@ -112,4 +112,4 @@ include_once('_template/navbar.php');
   	</form>
  </div>
 <?php
-include_once('_template/footer.php');
+include_once(ROOT_PATH.'footer.php');

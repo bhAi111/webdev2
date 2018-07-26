@@ -1,7 +1,7 @@
 <?php
 include_once('../core/main.php');
-include_once('_template/header.php');
-include_once('_template/navbar.php');
+include_once(ROOT_PATH.'header.php');
+include_once(ROOT_PATH.'navbar.php');
 
 $products = $edb->select(array(
 	'tblname' => 'product'
@@ -49,4 +49,4 @@ $products = $edb->select(array(
 	</table>
 </div>
 <?php
-include_once('_template/footer.php');
+include_once(ROOT_PATH.'footer.php');

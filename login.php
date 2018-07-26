@@ -34,7 +34,18 @@ if(!empty($_POST)){
 		$user = $edb->getNext();
 		if(!empty($user)){
 			$_SESSION['user_id'] = $user->id;
-			header('Location: admin/index.php');
+			$_SESSION['username'] = $user->username;
+			$_SESSION['user_type'] = $user->user_type;
+
+			switch($user->user_type){
+				case 1:
+					header('Location: admin/index.php');
+					break;
+				default:
+					header('location: index.php');
+			}
+
+ 			
 		}else{
 			$error = true;
 		}

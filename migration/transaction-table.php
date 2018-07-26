@@ -10,22 +10,34 @@ $transaction_table = array(
             'autoincrement'=>true,
             'notnull'=>true
         ),
-        // ...
-
-
-        # fullname varchar
-
-        # email varchar
- 
-        # address varchar
-
-        # phone varchar
-
-
-        # date
+        array(
+            'name'=>'fullname',
+            'type'=>'varchar',
+            'length'=>120,
+            'notnull'=>true
+        ),
+        array(
+            'name'=>'email',
+            'type'=>'varchar',
+            'length'=>120,
+            'notnull'=>true
+        ),
+        array(
+            'name'=>'address',
+            'type'=>'varchar',
+            'length'=>120,
+            'notnull'=>true
+        ),
+        array(
+            'name'=>'phone',
+            'type'=>'varchar',
+            'length'=>120,
+            'notnull'=>true
+        ),
         array(
             'name' => 'date_created',
-            'type' => 'DATETIME'
+            'type' => 'DATETIME',
+            
         )
     )
 );

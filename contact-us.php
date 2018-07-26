@@ -1,5 +1,5 @@
-<?php include_once('header.php'); ?>
-<?php include_once('navbar.php'); ?>
+<?php include_once(ROOT_PATH.'header.php'); ?>
+<?php include_once(ROOT_PATH.'navbar.php'); ?>
 <div class="wrapper">
 
 	<div class="container">
