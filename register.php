@@ -1,3 +1,4 @@
+<?php include_once('core/main.php'); ?>
 <?php include_once('header.php'); ?>
 <?php include_once('navbar.php'); ?>
 
@@ -12,7 +13,6 @@ if(!empty($_SESSION['user_id'])){
 	// if walay session
 	// do nothing
 }
-
 ?>
 <?php
 /* handles registration */
@@ -51,58 +51,60 @@ if(!empty($_POST)){
 		]
 	];
 	if ($edb->insertData($new_user)) {
+        $_SESSION['notif']['type'] = 'success';
+        $_SESSION['notif']['message'] = 'Customer registered successfully';
 		header('location: login.php');
 	}else{
-		$alert_class = 'danger';
-		$message = "Failed to create user";
+        $_SESSION['notif']['type'] = 'danger';
+        $_SESSION['notif']['message'] = 'Failed to register customer';
 	}
 }
 ?>
 <div class="wrapper access">
     <div class="container">
         <form class="col-md-6 col-md-offset-3" action="#" method="post">
-        	<?php if(!empty($_POST)){ ?>
-        		<div class="alert alert-<?php echo $alert_class; ?>" role="alert">
-        			<?php echo $message ?>
-    			</div>
-        	<?php } ?>
+        	<?php if(!empty($_SESSION['notif'])) { ?>
+                <div class="alert alert-<?php echo $_SESSION['notif']['type']; ?>">
+                    <?php echo $_SESSION['notif']['message']; ?>
+                </div>
+            <?php } ?>
+            <?php unset($_SESSION['notif']); ?>
             <div class="form-group">
                 <label for="email">Email address</label>
-                <input type="email" class="form-control" name="email" placeholder="Email">
+                <input type="email" class="form-control" name="email" placeholder="Email" required>
             </div>
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="username" class="form-control" name="username" placeholder="Username">
+                <input type="username" class="form-control" name="username" placeholder="Username" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" name="password" placeholder="Password">
+                <input type="password" class="form-control" name="password" placeholder="Password" required>
             </div>
             <hr/>
              <div class="form-group">
                 <label for="firstname">First Name</label>
-                <input type="firstname" class="form-control" name="firstname" placeholder="First Name">
+                <input type="firstname" class="form-control" name="firstname" placeholder="First Name" required>
             </div>
             <div class="form-group">
                 <label for="midname">Mid Name</label>
-                <input type="midname" class="form-control" name="midname" placeholder="Mid Name">
+                <input type="midname" class="form-control" name="midname" placeholder="Mid Name" requried>
             </div>
             <div class="form-group">
                 <label for="lastname">Last Name</label>
-                <input type="lastname" class="form-control" name="lastname" placeholder="Last Name">
+                <input type="lastname" class="form-control" name="lastname" placeholder="Last Name" required>
             </div>
             <div class="form-group">
                 <label for="age">Age</label>
-                <input type="number" class="form-control" name="age" placeholder="Age">
+                <input type="number" class="form-control" name="age" placeholder="Age" required>
             </div>
             <div class="form-group">
                 <label for="age">Age</label>
-                <select class="form-control" name="gender">
+                <select class="form-control" name="gender" required>
                 	<option value="m">Male</option>
                 	<option value="f">Female</option>
                 </select>
             </div>
-
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
     </div>

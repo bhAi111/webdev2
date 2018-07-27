@@ -98,6 +98,7 @@
                                     break;
                                 default:
                                     echo "<li><a href='".ROOT_URL."profile.php'>Profile</a></li>";
+                                    echo "<li><a href='".ROOT_URL."orders.php'>Orders</a></li>";
                             }
                             ?> 
                             <li><a href="<?php echo ROOT_URL; ?>logout.php">Lougout</a></li>

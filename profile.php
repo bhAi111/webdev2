@@ -1,9 +1,7 @@
+<?php include_once('core/main.php'); ?>
 <?php include_once('header.php'); ?>
 <?php include_once('navbar.php'); ?>
 <div class="wrapper">
-
-
- 
  	<section class="container products">
  		<h1>User Details</h1>
  		<form>

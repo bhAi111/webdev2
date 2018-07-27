@@ -1,5 +1,13 @@
 <?php
 include_once('core/main.php');
+
+$total_price = 0;
+$total_products = 0;
+foreach($_SESSION['cart'] as $product_id => $item){
+	$total_price += ($item['quantity'] * $item['price']);
+	$total_products++;
+}
+
 $result = $edb->select(array(
     'tblname' =>  'user' ,
     'where' =>array(
@@ -21,26 +29,32 @@ if($result){
 	$transaction = [
 		'tblname' => 'transaction',
 		'columns' => [
+			'user_id',
 			'fullname',
 			'email',
 			'address',
 			'phone',
+			'total_price',
+			'item_count',
+			'order_status',
 			'date_created'
 		],
 		'value' => [
+			$_SESSION['user_id'],
 			$fullname,
 			$customer->email,
 			$_POST['address'],
 			$_POST['phone'],
+			$total_price,
+			$total_products,
+			'pending',
 			$today
 		]
 	];
-
 	if ($edb->insertData($transaction)) {
 		$id = $edb->insertId();
-		$items = $_SESSION['cart'];
 		try{
-			foreach($items as $product_id => $item){
+			foreach($_SESSION['cart'] as $product_id => $item){
 				$transaction_item = [
 					'tblname' => 'transaction_item',
 					'columns' => [

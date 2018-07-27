@@ -1,3 +1,4 @@
+<?php include_once('core/main.php'); ?>
 <?php
 include_once('header.php');
 include_once('navbar.php');

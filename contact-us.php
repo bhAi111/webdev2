@@ -1,3 +1,4 @@
+<?php include_once('core/main.php'); ?>
 <?php include_once(ROOT_PATH.'header.php'); ?>
 <?php include_once(ROOT_PATH.'navbar.php'); ?>
 <div class="wrapper">

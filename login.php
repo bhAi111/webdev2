@@ -1,3 +1,5 @@
+
+<?php include_once('core/main.php'); ?>
 <?php include_once('header.php'); ?>
 <?php include_once('navbar.php'); ?>
 <?php
@@ -48,20 +50,25 @@ if(!empty($_POST)){
  			
 		}else{
 			$error = true;
+			$_SESSION['notif']['type'] = 'danger';
+			$_SESSION['notif']['message'] = 'Username or password is incorrect';
 		}
 	}else{
 		$error = true;
+		$_SESSION['notif']['type'] = 'danger';
+		$_SESSION['notif']['message'] = 'Username or password is incorrect';
 	}
 }
-
 ?>
 <div class="wrapper access">
     <div class="container">
-    	
         <form class="col-md-6 col-md-offset-3" action="#" method="post">
-        	<?php if($error){ ?>
-	    		<div class="alert alert-danger" role="alert">Username or password is incorrect</div>
+	    	<?php if(!empty($_SESSION['notif'])) { ?>
+	    		<div class="alert alert-<?php echo $_SESSION['notif']['type']; ?>">
+	    			<?php echo $_SESSION['notif']['message']; ?>
+	    		</div>
 	    	<?php } ?>
+	    	<?php unset($_SESSION['notif']); ?>
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="username" class="form-control"  name="username" placeholder="Username">

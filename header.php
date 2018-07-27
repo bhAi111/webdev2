@@ -1,4 +1,3 @@
-<?php include_once('core/main.php'); ?>
 <html>
 
 <head>

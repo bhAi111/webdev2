@@ -206,3 +206,7 @@ padding-top: 10px;
 .footer ul.social a i{
       font-size: 20px;
 }
+
+.full-screen{
+ min-height: 100%;
+}
